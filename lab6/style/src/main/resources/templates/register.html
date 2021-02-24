@@ -1,0 +1,37 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+
+    <title>Реєстрація</title>
+
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+    <script crossorigin="anonymous"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+
+</head>
+
+<body class="text-center">
+<form class="form-signin" method="POST" th:action="@{/register}" th:object="${UserRegisterForm}">
+    <h1 class="h3 mb-3 font-weight-normal">Введіть дані для реєстрації</h1>
+    <input autofocus class="form-control" id="inputFName" placeholder="Ім'я" required th:field="*{fName}" type="text">
+    <input class="form-control" id="inputNName" placeholder="Прізвище" required th:field="*{lName}" type="text">
+    <label class="sr-only" for="inputEmail">Електронна адреса</label>
+    <input class="form-control" id="inputEmail" placeholder="Email" required th:field="*{email}" type="email">
+    <label class="sr-only" for="inputPassword">Пароль</label>
+    <input class="form-control" id="inputPassword" placeholder="Password" required th:field="*{passwordHash}"
+           type="password">
+
+    <input class="btn btn-lg btn-primary btn-block" type="submit" value="Зареєструватися">
+
+</form>
+</body>
+</html>

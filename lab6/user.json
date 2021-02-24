@@ -1,0 +1,86 @@
+{
+  "fields": [
+    {
+      "name": "_id",
+      "path": "_id",
+      "count": 1000,
+      "total_count": 1000,
+      "type": "ObjectID",
+      "has_duplicates": false,
+      "probability": 1
+    },
+    {
+      "name": "email",
+      "path": "email",
+      "count": 1000,
+      "total_count": 1000,
+      "type": "String",
+      "has_duplicates": true,
+      "probability": 1
+    },
+    {
+      "name": "fname",
+      "path": "fname",
+      "count": 1000,
+      "total_count": 1000,
+      "type": "String",
+      "has_duplicates": true,
+      "probability": 1
+    },
+    {
+      "name": "lname",
+      "path": "lname",
+      "count": 1000,
+      "total_count": 1000,
+      "type": "String",
+      "has_duplicates": true,
+      "probability": 1
+    },
+    {
+      "name": "password",
+      "path": "password",
+      "count": 1000,
+      "types": [
+        {
+          "name": "String",
+          "bsonType": "String",
+          "path": "password",
+          "total_count": 0,
+          "probability": 1,
+          "unique": 6,
+          "has_duplicates": true
+        }
+      ],
+      "total_count": 1000,
+      "type": "String",
+      "has_duplicates": true,
+      "probability": 1
+    },
+    {
+      "name": "role",
+      "path": "role",
+      "count": 1000,
+      "types": [
+        {
+          "name": "String",
+          "bsonType": "String",
+          "path": "role",
+          "count": 1000,
+          "values": [
+            "client",
+            "admin"
+          ],
+          "total_count": 0,
+          "probability": 1,
+          "unique": 2,
+          "has_duplicates": true
+        }
+      ],
+      "total_count": 1000,
+      "type": "String",
+      "has_duplicates": true,
+      "probability": 1
+    }
+  ],
+  "count": 1000
+}

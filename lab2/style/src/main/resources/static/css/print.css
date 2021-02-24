@@ -1,0 +1,470 @@
+@media print {
+    body, *, *:before, *:after {
+
+
+        box-sizing: border-box;
+    }
+
+    ::selection {
+        background: #d6d6d6;
+    }
+
+    html {
+        filter: grayscale(100%);
+        background-color: #ffffff;
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+        transition-duration: 2s;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #d6d6d6;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #9b9b9b;
+    }
+
+    .fixed-width {
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+        content: " ";
+        display: table;
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+
+    h1, h2, h3, h4, h5, h6, .title {
+        font-family: "Economica", sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0 0 0.5em;
+        cursor: pointer;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    a {
+        color: inherit;
+        font-weight: bold;
+        text-decoration: none;
+        cursor: auto;
+    }
+
+
+    p {
+        font-size: 1em;
+        margin: 0.5em 0;
+        line-height: 1.4em;
+    }
+
+    html, body {
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+
+        color: #474747;
+        background-color: #ffffff;
+    }
+
+    /* === Header === */
+    .page-header {
+        border-top: 12px solid #ebebeb;
+        padding-bottom: 4em;
+        animation-duration: 3s;
+        animation-name: glow;
+        border-bottom-left-radius: 14%;
+        border-bottom-right-radius: 14%;
+    }
+
+    @keyframes glow {
+        from {
+            background-color: white
+        }
+        50% {
+            background-color: #ebebeb;
+        }
+        to {
+            background-color: white;
+        }
+    }
+
+    .page-header .logo {
+        font-family: "Pacifico" cursive;
+        font-size: 3.5em;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .page-header > div {
+        position: relative;
+    }
+
+    .page-header nav {
+        float: right;
+        font-family: "Economica" sans-serif;
+        text-transform: uppercase;
+    }
+
+    .page-header nav li {
+        color: #d6d6d6;
+        float: left;
+        margin-right: 2.8rem;
+        margin-top: 2.5em;
+        padding-top: 0.5em;
+        border-radius: 5%;
+    }
+
+    .page-header nav li {
+        transition-duration: 0.3s;
+        color: #d6d6d6;
+    }
+
+    .form-title {
+        display: none;
+    }
+
+    .page-header nav li:last-child {
+        margin-right: 0px;
+    }
+
+    .page-header nav li em {
+        display: block;
+        color: #474747;
+        font-size: 1.6em;
+    }
+
+
+    /* ===============
+        Main content
+        =============== */
+    main {
+    }
+
+    main section {
+        width: 100%;
+        margin-bottom: 4em;
+    }
+
+    main section .main-visual figcaption {
+        background-color: #f6f6f6;
+        padding: 0.5em 1em;
+    }
+
+    main section .main-visual > strong {
+        font-size: 1.5em;
+    }
+
+    main section .main-visual img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    main .claims {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: space-evenly;
+        grid-gap: 2em;
+    }
+
+    main .claims .claim {
+        margin-bottom: 0px;
+    }
+
+    main .claims .claim header > i {
+        font-size: 2.5rem;
+        float: left;
+        width: 25%;
+    }
+
+    main .claims .claim header h2 {
+        float: left;
+        width: 75%;
+    }
+
+    main .latest-works {
+        position: relative;
+    }
+
+    main .latest-works:before {
+        content: "    ";
+        background-color: #f6f6f6;
+        margin-bottom: 2em;
+        display: block;
+        height: 30px;
+    }
+
+    main .latest-works .latest-works-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    main .latest-works .latest-works-header h2 {
+        display: inline;
+        background-color: white;
+        padding: 1em;
+    }
+
+    .grid-container {
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    main .latest-works .works {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        justify-content: space-around;
+        grid-row-gap: 1.2em;
+        grid-column-gap: 1.2em;
+        padding-top: 2em;
+    }
+
+
+    main .latest-works .works .work {
+        display: block;
+        overflow: hidden;
+        background-color: #ffffff;
+        background-color: #ffffff;
+        background: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png") center no-repeat;
+        background-size: cover;
+
+    }
+
+    main .latest-works .works .work .image-container {
+        overflow: hidden;
+        height: 200px;
+        width: 200px;
+    }
+
+    main .latest-works .works .work figure img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        transition: transform .5s ease;
+        margin-bottom: 1.2em;
+        margin-right: 3em;
+    }
+
+    main .latest-works .works .work figure {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 2em;
+        transition-duration: 0.3s;
+    }
+
+
+    main .latest-works .works .work figure figcaption {
+        padding-left: 1.5em;
+        position: relative;
+    }
+
+    main .latest-works .works .work figure figcaption h2 {
+        margin-top: 0.6em;
+    }
+
+    main .latest-works .works .work figure figcaption p {
+        color: rgb(131, 130, 130);
+    }
+
+
+    .page-form {
+        display: none;
+        flex-flow: wrap;
+        justify-content: space-between;
+        padding: 2em;
+        background-color: #f6f6f6;
+    }
+
+    .input-field {
+        border: 1px solid #d6d6d6;
+        border-radius: 0.2em;
+        height: 4em;
+        margin-bottom: 4em;
+        display: inline-block;
+    }
+
+
+    .page-form input[type="text"] {
+        width: 48%;
+        padding: 12px 20px;
+        margin: 8px 0;
+
+        border: 1px solid #d6d6d6;
+        border-radius: 0.2em;
+        height: 4em;
+        margin-bottom: 4em;
+        display: inline-block;
+    }
+
+
+    .page-form input[type="email"] {
+        width: 48%;
+        padding: 12px 20px;
+        margin: 8px 0;
+
+        border: 1px solid #d6d6d6;
+        border-radius: 0.2em;
+        height: 4em;
+        margin-bottom: 4em;
+        display: inline-block;
+    }
+
+    .page-form select {
+        height: 4em;
+        width: 31%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+
+        border: 1px solid #d6d6d6;
+        border-radius: 0.2em;
+        height: 4em;
+        margin-bottom: 4em;
+        display: inline-block;
+    }
+
+    .page-form #phone {
+        width: 45%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 4em;
+
+        border: 1px solid #d6d6d6;
+        border-radius: 0.2em;
+        height: 4em;
+        margin-bottom: 4em;
+        display: inline-block;
+    }
+
+    .page-form input[type="date"] {
+        width: 13%;
+        margin: 8px 0;
+        height: 4em;
+        border-radius: 4px;
+        padding: 12px 14px;
+
+        border: 1px solid #d6d6d6;
+        border-radius: 0.2em;
+        height: 4em;
+        margin-bottom: 4em;
+        display: inline-block;
+    }
+
+    .page-form textarea {
+        width: 100%;
+        height: 40px;
+        min-width: 100%;
+        padding: 12px 14px;
+
+        border: 1px solid #d6d6d6;
+        border-radius: 0.2em;
+        height: 4em;
+        margin-bottom: 4em;
+        display: inline-block;
+    }
+
+    .page-form label {
+        width: 96%;
+        padding-top: 10px;
+    }
+
+    .page-from input[type="checkbox"] {
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        box-sizing: border-box;
+
+        border: 1px solid #d6d6d6;
+        border-radius: 0.2em;
+        height: 4em;
+        margin-bottom: 4em;
+        display: inline-block;
+    }
+
+    .page-form input[type="submit"] {
+        border: 1px solid #d6d6d6;
+        border-radius: 0.2em;
+        height: 4em;
+        margin-bottom: 4em;
+        display: inline-block;
+        margin-left: 500px;
+        margin-right: 220px;
+        margin-top: 3em;
+        margin-bottom: 1em;
+    }
+
+
+    .page-footer {
+        background-color: #f4f4f4;
+        color: #9b9b9b;
+        font-size: 1rem;
+        opacity: 1;
+        transition-duration: 0.3s;
+    }
+
+    .page-footer .page-footer-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .page-footer-content .footer-section {
+        margin-right: 3em;
+        margin-top: 0.5em;
+        width: 33%;
+    }
+
+    .footer-section .phones li {
+        list-style: square;
+        line-height: 2em;
+
+        font-size: 1.5em;
+    }
+
+    .footer-section:nth-child(2) li {
+        list-style: circle;
+
+        line-height: 2em;
+        font-size: 1.5em;
+    }
+
+    .footer-section:nth-child(2) li a {
+        padding-left: 2em;
+    }
+
+    .footer-section:nth-child(3) {
+        font-size: 1.4em;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .page-footer-content .footer-section:last-child {
+        margin-right: 0;
+    }
+
+}

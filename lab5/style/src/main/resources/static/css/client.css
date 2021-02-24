@@ -1,0 +1,81 @@
+.client-info {
+    padding: 0 33px;
+}
+
+.client-info .row {
+    display: block
+}
+
+.client-info .row p {
+    display: inline;
+}
+
+.good {
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    padding: 2px;
+}
+
+.bad {
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+}
+
+.reservation {
+    padding: 10px;
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.dates .date {
+    border: 1px solid black;
+}
+
+.dates .date p:last-of-type {
+    font-size: 3em;
+}
+
+.reservation .title {
+    text-align: center;
+    padding-top: 5px;
+    display: block;
+}
+
+.equipment {
+    width: 100%;
+    border: 1px solid black;
+    display: block;
+    scroll-behavior: smooth;
+    overflow: auto;
+    height: 155px;
+}
+
+.equipment .equipment-item {
+    display: block;
+    text-align: center;
+    padding: 5px;
+}
+
+.key-value {
+    display: block;
+}
+
+.key-value .pair {
+    display: block;
+}
+
+.key-value .pair .key {
+    display: inline;
+}
+
+.key-value .pair .value {
+    display: inline-block;
+    font-weight: bold;
+}

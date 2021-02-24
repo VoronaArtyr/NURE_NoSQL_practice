@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css"
+          rel="stylesheet"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <title>
+        Запис до перукаря
+    </title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <link href="https://getbootstrap.com/docs/4.1/examples/checkout/" rel="canonical">
+    <!-- Bootstrap core CSS -->
+    <!-- Custom styles for this template -->
+</head>
+
+<body class="bg-light">
+
+<div class="container">
+    <div class="py-5 text-center">
+    </div>
+
+    <form id="reservationForm" method="POST" th:action="@{/user/client/booking/new}"
+          th:object="${NewBookingForm}">
+        <div class="row">
+            <div class="col-md-4 order-md-2 mb-4">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted">Послуги</span>
+                </h4>
+                <!-- <ul class="list-group mb-3"> -->
+                <div class="list-group mb-3">
+                    <script>
+                        $('select').selectpicker();
+                    </script>
+
+                    <select class="selectpicker" data-live-search="true" data-selected-text-format="count" multiple
+                            th:field="*{service}" title="Без обладнання">
+                        <option
+                                th:each="serviceItem : ${servicesList}"
+                                th:text="${serviceItem.name}"
+                                th:value="${serviceItem.id}">
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-8 order-md-1">
+                <h4 class="mb-3">Контактні дані</h4>
+
+
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col">
+                            <label class="control-label" for="startDate">Дата початку</label>
+                            <input class="form-control"
+                                   id="startDate"
+                                   max="3000-12-31"
+                                   min="1000-01-01"
+                                   name="startDate"
+                                   placeholder="DD/MM/YYY"
+                                   required
+                                   th:field="*{startDate}"
+                                   type="datetime-local"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col">
+                            <label class="control-label" for="endDate">Дата завершення</label>
+                            <input class="form-control"
+                                   data-date-format="dd/mm/yyyy"
+                                   id="endDate"
+                                   max="3000-12-31"
+                                   min="1000-01-01"
+                                   name="endDate"
+                                   placeholder="DD/MM/YYY"
+                                   required
+                                   th:field="*{endDate}"
+                                   type="datetime-local"
+                            />
+                            <!--            <input type="date"-->
+                            <!--                th:field="*{startDate}" />-->
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Оформити</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<footer class="my-5 pt-5 text-muted text-center text-small">
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script>
+
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict';
+
+        window.addEventListener('load', function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+</body>
+</html>

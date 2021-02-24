@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ua" style="font-size: 16px;">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Booking</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+    <script crossorigin="anonymous"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link rel="stylesheet" th:href="@{/css/shared.css}">
+</head>
+<body class="text-center">
+
+<div class="container flex-column fixed-width pt-3" style="width: 888px">
+    <header class="masthead mb-auto d-block">
+            <nav class="nav nav-masthead justify-content-center"> </nav>
+    </header>
+
+
+    <main class="overflow-hidden mt-5">
+        <section class="jumbotron top-jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">Інформація про запис #<span th:text="${booking.id}">31</span> </h1>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="mb-5 pt-2 rounded-lg bg-light">
+                <div class="row mb-3 fixed-width bg-dark text-light py-2">
+                    <div class="col">
+                        <div class="d-inline h3 ">З</div>
+                        <div class="d-inline h3" th:text="${#dates.format(booking.startsAt, 'dd-MM-yyyy')}"></div>
+                    </div>
+                    <div class="col ">
+                        <div class="d-inline h3 ">До</div>
+                        <div class="d-inline h3" th:text="${#dates.format(booking.endsAt, 'dd-MM-yyyy')}"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 overflow-auto" style="max-height: 180px; min-height: 180px">
+                        <div th:if="${not #lists.isEmpty(booking.services)}">
+                            <table class="table">
+                                <tr th:each="service : ${booking.services}">
+                                    <td th:text="${service.name}">Microphone</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="d-flex align-items-center" th:if="${#lists.isEmpty(booking.services)}">
+                            <p class="d-block h5 mt-5" style="margin: auto;">Без обладнання</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <p class="d-inline"> Статус виконання </p>
+                            <strong>
+                                <p class="d-inline ml-2" th:text="${booking.status.name}">Status</p>
+                            </strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="jumbotron text-center pt-0 pb-5">
+            <div class="d-inline" th:each="status : ${statuses}">
+                <a class="btn btn-primary mt-5" th:href="@{|/user/admin/booking/${booking.id}/status/${status.id}|}"
+                   th:text="${status.name}"> </a>
+            </div>
+        </section>
+        <section class="jumbotron text-center pt-0 pb-5">
+            <a class="btn btn-primary mt-5" th:href="@{|/user/admin/booking/${booking.id}/delete|}"
+               th:text="Delete"> </a>
+        </section>
+
+    </main>
+
+    <footer class="mastfoot mt-auto">
+        <div class="inner">
+            <p></p>
+        </div>
+    </footer>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script crossorigin="anonymous"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="../../assets/js/vendor/popper.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{
+  "fields": [
+    {
+      "name": "_id",
+      "path": "_id",
+      "count": 140,
+      "types": [
+        {
+          "name": "ObjectID",
+          "bsonType": "ObjectID",
+          "path": "_id",
+          "count": 140,
+          "total_count": 0,
+          "probability": 1,
+          "unique": 140,
+          "has_duplicates": false
+        }
+      ],
+      "total_count": 140,
+      "type": "ObjectID",
+      "has_duplicates": false,
+      "probability": 1
+    },
+    {
+      "name": "name",
+      "path": "name",
+      "count": 140,
+      "types": [
+        {
+          "name": "String",
+          "bsonType": "String",
+          "path": "name",
+          "count": 140,
+          "values": [
+            "Unprocessed",
+            "Approved",
+            "Cancelled",
+            "Done"
+	  ],
+          "total_count": 0,
+          "probability": 1,
+          "unique": 4,
+          "has_duplicates": true
+        }
+      ],
+      "total_count": 140,
+      "type": "String",
+      "has_duplicates": true,
+      "probability": 1
+    }
+  ],
+  "count": 140
+}

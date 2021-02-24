@@ -1,0 +1,208 @@
+{
+  "fields": [
+    {
+      "name": "_id",
+      "path": "_id",
+      "count": 1,
+      "types": [
+        {
+          "name": "ObjectID",
+          "bsonType": "ObjectID",
+          "path": "_id",
+          "count": 1,
+          "total_count": 0,
+          "probability": 1,
+          "unique": 1,
+          "has_duplicates": false
+        }
+      ],
+      "total_count": 1,
+      "type": "ObjectID",
+      "has_duplicates": false,
+      "probability": 1
+    },
+    {
+      "name": "client",
+      "path": "client",
+      "count": 1,
+      "types": [
+        {
+          "name": "Document",
+          "bsonType": "Document",
+          "path": "client",
+          "count": 1,
+          "fields": [
+            {
+              "name": "_id",
+              "path": "client._id",
+              "count": 1,
+              "types": [
+                {
+                  "name": "ObjectID",
+                  "bsonType": "ObjectID",
+                  "path": "client._id",
+                  "count": 1,
+                  "total_count": 0,
+                  "probability": 1,
+                  "unique": 1,
+                  "has_duplicates": false
+                }
+              ],
+              "total_count": 1,
+              "type": "ObjectID",
+              "has_duplicates": false,
+              "probability": 1
+            }
+          ],
+          "total_count": 0,
+          "probability": 1
+        }
+      ],
+      "total_count": 1,
+      "type": "Document",
+      "has_duplicates": false,
+      "probability": 1
+    },
+    {
+      "name": "endsAt",
+      "path": "endsAt",
+      "count": 1,
+      "types": [
+        {
+          "name": "Date",
+          "bsonType": "Date",
+          "path": "endsAt",
+          "count": 1,
+          "total_count": 0,
+          "probability": 1,
+          "unique": 1,
+          "has_duplicates": false
+        }
+      ],
+      "total_count": 1,
+      "type": "Date",
+      "has_duplicates": false,
+      "probability": 1
+    },
+    {
+      "name": "services",
+      "path": "services",
+      "count": 1,
+      "types": [
+        {
+          "name": "Array",
+          "bsonType": "Array",
+          "path": "service",
+          "count": 1,
+          "types": [
+            {
+              "name": "Document",
+              "bsonType": "Document",
+              "path": "service",
+              "count": 4,
+              "fields": [
+                {
+                  "name": "description",
+                  "path": "service.description",
+                  "count": 4,
+                  "types": [
+                    {
+                      "name": "String",
+                      "bsonType": "String",
+                      "path": "service.description",
+                      "count": 4,
+                      "total_count": 0,
+                      "probability": 1,
+                      "unique": 3,
+                      "has_duplicates": true
+                    }
+                  ],
+                  "total_count": 4,
+                  "type": "String",
+                  "has_duplicates": true,
+                  "probability": 1
+                },
+                {
+                  "name": "name",
+                  "path": "service.name",
+                  "count": 4,
+                  "types": [
+                    {
+                      "name": "String",
+                      "bsonType": "String",
+                      "path": "service.name",
+                      "count": 4,
+                      "total_count": 0,
+                      "probability": 1,
+                      "unique": 3,
+                      "has_duplicates": true
+                    }
+                  ],
+                  "total_count": 4,
+                  "type": "String",
+                  "has_duplicates": true,
+                  "probability": 1
+                }
+              ],
+              "total_count": 0,
+              "probability": 1
+            }
+          ],
+          "lengths": [
+            4
+          ],
+          "total_count": 4,
+          "probability": 1,
+          "average_length": 4
+        }
+      ],
+      "total_count": 1,
+      "type": "Array",
+      "has_duplicates": false,
+      "probability": 1
+    },
+    {
+      "name": "startsAt",
+      "path": "startsAt",
+      "count": 1,
+      "types": [
+        {
+          "name": "Date",
+          "bsonType": "Date",
+          "path": "startsAt",
+          "count": 1,
+          "total_count": 0,
+          "probability": 1,
+          "unique": 1,
+          "has_duplicates": false
+        }
+      ],
+      "total_count": 1,
+      "type": "Date",
+      "has_duplicates": false,
+      "probability": 1
+    },
+    {
+      "name": "status",
+      "path": "status",
+      "count": 1,
+      "types": [
+        {
+          "name": "String",
+          "bsonType": "String",
+          "path": "status",
+          "count": 1,
+          "total_count": 0,
+          "probability": 1,
+          "unique": 1,
+          "has_duplicates": false
+        }
+      ],
+      "total_count": 1,
+      "type": "String",
+      "has_duplicates": false,
+      "probability": 1
+    }
+  ],
+  "count": 1
+}
